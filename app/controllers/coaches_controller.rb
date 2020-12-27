@@ -7,8 +7,16 @@ class CoachesController < ApplicationController
         erb :"coaches/index"
     end
 
-    #show
-
     #new
+    get '/coaches/new' do
+
+    end
+
+    #show
+    get '/coaches/:id' do
+        @coach = Coach.find_by(id: params[:id])
+
+        erb :"coaches/show"
+    end
 
 end
