@@ -1,6 +1,6 @@
 class CoachesController < ApplicationController
 
-    #index
+    #index - loads all coaches
     get '/coaches' do
         @coaches = Coach.all
 
@@ -9,10 +9,10 @@ class CoachesController < ApplicationController
 
     #new
     get '/coaches/new' do
-
+        
     end
 
-    #show
+    #show - get details on an indiviual coach
     get '/coaches/:id' do
         @coach = Coach.find_by(id: params[:id])
 
