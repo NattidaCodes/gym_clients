@@ -7,7 +7,7 @@ class ClientsController < ApplicationController
     end
 
     get '/clients/:id' do
-        @clients = Client.find_by(id: params[:id])
+        @client = Client.find_by(id: params[:id])
 
         erb :"clients/show"
     end

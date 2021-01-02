@@ -1,5 +1,14 @@
-<h1><%= @coach.name %></h1>
+<h1> Coach </h1>
 
-<h3><%= @coach.gender.capitalize %></h3>
+<h2><%= @coach.name %></h2>
 
-<h3><%= @coach.age %></h3>
+<h4><%= @coach.gender.capitalize %></h4>
+
+<h4><%= @coach.age %></h4>
+
+<h4> Clients</h4>
+<p><ul>
+<% @coach.clients.each do |client| %>
+    <li><%= client.name %></li>
+<% end %>
+</ul></p>
