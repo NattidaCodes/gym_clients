@@ -1,16 +1,16 @@
 class CoachesController < ApplicationController
 
+    #new - loads a form
+    get '/coaches/new' do
+        
+    end
+    
     #index - loads all coaches
     get '/coaches' do
         @coaches = Coach.all
 
         erb :"coaches/index"
     end
-
-    # #new
-    # get '/coaches/new' do
-
-    # end
 
     #show - get details on an indiviual coach
     get '/coaches/:id' do
