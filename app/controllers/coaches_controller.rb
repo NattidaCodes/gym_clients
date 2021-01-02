@@ -2,7 +2,13 @@ class CoachesController < ApplicationController
 
     #new - loads a form
     get '/coaches/new' do
-        
+        erb :"coaches/new" 
+    end
+
+    #create - process the form and creates a coach
+    post "/coaches" do
+        coach = Coach.create(params)
+        redirect "/coaches"
     end
     
     #index - loads all coaches
