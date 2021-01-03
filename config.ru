@@ -9,4 +9,5 @@ run ApplicationController
 
 use CoachesController
 use ClientsController
+use UsersController
 
