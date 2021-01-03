@@ -42,4 +42,11 @@ class CoachesController < ApplicationController
         redirect "/coaches/#{@coach.id}"
     end
 
+    #delete
+    delete "/coaches/:id" do
+        @coach = Coach.find_by(id: params[:id])
+        @coach.destroy
+        redirect "/coaches"
+    end
+
 end

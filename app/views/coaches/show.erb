@@ -14,3 +14,8 @@
 </ul></p>
 
 <a href="/coaches/<%= @coach.id %>/edit"> Edit <%= @coach.name %></a>
+
+<form method="POST" action="/coaches/<%= @coach.id %>">
+    <input type="hidden" value="DELETE" name="_method">
+    <input type="submit" value="Delete">
+</form>
