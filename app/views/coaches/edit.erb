@@ -1,0 +1,9 @@
+<h1> Edit <%= @coach.name %> </h1>
+
+<form method="POST" action="/coaches/<%= @coach.id %>/edit">
+    <input type="hidden" value="PATCH" name="_method">
+    Name: <input type="text" name="coach[name]" value="<%= @coach.name %>"><br>
+    Gender: <input type="text" name="coach[gender]" value="<%= @coach.gender %>"><br>
+    Age: <input type="text" name="coach[age]" value="<%= @coach.age %>"><br>
+    <input type="submit" value="Save">
+</form>

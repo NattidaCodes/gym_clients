@@ -28,4 +28,18 @@ class CoachesController < ApplicationController
         end
     end
 
+    #edit - loading a form to edit a coach
+    get '/coaches/:id/edit' do
+        @coach = Coach.find_by(id: params[:id])
+
+        erb :"coaches/edit"
+    end
+
+    #update
+    patch '/coaches/:id/edit' do
+        @coach = Coach.find_by(id: params[:id])
+        @coach.update(params[:coach])
+        redirect "/coaches/#{@coach.id}"
+    end
+
 end
